@@ -11,7 +11,7 @@ export default memo(function YLDiscoverPage(props) {
   return (
     <DiscoverWrapper>
       <div className="top">
-        <TopMenu className="warp-v1">
+        <TopMenu className="wrap-v1">
           {dicoverMenu.map((item) => {
             return (
               <div className="item" key={item.title}>

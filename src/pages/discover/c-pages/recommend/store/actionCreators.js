@@ -2,7 +2,7 @@ import * as actionTypes from './constants';
 
 import { getNewAlbums } from '@/services/recommend';
 
-import { 
+import {
   getTopBanners,
   getHotRecommends,
   getTopList

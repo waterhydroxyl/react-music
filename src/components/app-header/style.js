@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.header`
 
   .divider {
     height: 5px;
-    background-color: #C20C0C;
+    background-color: #c20c0c;
   }
 `;
 
@@ -107,23 +107,39 @@ export const HeaderRight = styled.div`
       color: #fff;
       border-color: #fff;
     }
+
   }
 
   .login {
+    position: relative;
     cursor: pointer;
+
     &:hover {
       ::after {
+        content: '';
+        position: absolute;
+        left: -73px;
+        width: 158px;
+        top: 30px;
+        background: #2b2b2b;
+        border: 1px solid #202020;
+        box-shadow: 0 8px 24px 0 rgb(0 0 0 / 50%);
+        border-radius: 4px;
+      }
+
+      ::before {
       content: '';
       position: absolute;
-      right: 340px;
-      width: 158px;
-      top:60px;
-      background: #2b2b2b;
-      border: 1px solid #202020;
-      box-shadow: 0 8px 24px 0 rgb(0 0 0 / 50%);
-      border-radius: 4px;
+      overflow: hidden;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0;
+      line-height: 0;
+      border-color: transparent transparent #434343 transparent;
+      border-style: solid;
+      border-width: 4px;
     }
     }
-
   }
 `;
