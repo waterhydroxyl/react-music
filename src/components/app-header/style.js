@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.header`
 
   .divider {
     height: 5px;
-    background-color: red;
+    background-color: #C20C0C;
   }
 `;
 
