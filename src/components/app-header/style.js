@@ -25,6 +25,7 @@ export const HeaderLeft = styled.div`
     width: 176px;
     height: 69px;
     background-position: 0 0;
+    text-indent: -9999px;
   }
   .select-list {
     display: flex;
@@ -53,7 +54,7 @@ export const HeaderLeft = styled.div`
       }
 
       &:hover a,
-      a.active {
+      .active {
         color: #fff;
         background: #000;
         text-decoration: none;
@@ -73,4 +74,56 @@ export const HeaderLeft = styled.div`
   }
 `;
 
-export const HeaderRight = styled.div``;
+export const HeaderRight = styled.div`
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+
+  .search {
+    width: 158px;
+    height: 32px;
+    border-radius: 16px;
+
+    input {
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .center {
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 16px;
+    margin: 0 16px;
+    cursor: pointer;
+    color: #666;
+    background-color: transparent;
+    &:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  .login {
+    cursor: pointer;
+    &:hover {
+      ::after {
+      content: '';
+      position: absolute;
+      right: 340px;
+      width: 158px;
+      top:60px;
+      background: #2b2b2b;
+      border: 1px solid #202020;
+      box-shadow: 0 8px 24px 0 rgb(0 0 0 / 50%);
+      border-radius: 4px;
+    }
+    }
+
+  }
+`;

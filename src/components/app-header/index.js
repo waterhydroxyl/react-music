@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { headerLinks } from '@/common/local-data';
 
 import { HeaderLeft, HeaderRight, HeaderWrapper } from './style';
+import { Input } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
 export default memo(function YLAppHeader() {
   const showSelectItem = (item, index) => {
@@ -33,7 +35,7 @@ export default memo(function YLAppHeader() {
       <div className="content wrap-v1">
         <HeaderLeft>
           <a className="logo sprite_01" href="#/">
-            {' '}
+            网易云音乐
           </a>
           <div className="select-list">
             {headerLinks.map((item, index) => {
@@ -41,11 +43,15 @@ export default memo(function YLAppHeader() {
                 <div className="select-item" key={item.title}>
                   {showSelectItem(item, index)}
                 </div>
-              )
+              );
             })}
           </div>
         </HeaderLeft>
-        <HeaderRight>right</HeaderRight>
+        <HeaderRight>
+          <Input placeholder="搜索" className="search" prefix={<SearchOutlined />} />
+          <div className="center" > 创作者中心 </div>
+          <div className='login'>登录</div>
+        </HeaderRight>
       </div>
       <div className="divider"></div>
     </HeaderWrapper>
