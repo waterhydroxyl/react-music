@@ -2,6 +2,7 @@ import { Map } from 'immutable'
 
 import * as actionTypes from './constants';
 
+
 const defaultState = Map({
   topBanners: [],
   hotRecommends: [],
