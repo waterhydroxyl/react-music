@@ -23,6 +23,8 @@ export const BannerLeft = styled.div`
     }
   }
   .ant-carousel .slick-dots li {
+    transition: none;
+    width: auto;
     button {
       display: block;
       width: 10px;
@@ -36,7 +38,7 @@ export const BannerLeft = styled.div`
       outline: none;
       cursor: pointer;
       opacity: 0.3;
-      /* transition: none; */
+      transition: none;
     }
 
     &.slick-active {
